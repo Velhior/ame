@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/fitness', 'CategoryController@fitness')->name('fitness');
+Route::get('/food', 'CategoryController@food')->name('food');
+Route::get('/motivation', 'CategoryController@motivation')->name('motivation');
+Route::get('/event', 'CategoryController@event')->name('event');
